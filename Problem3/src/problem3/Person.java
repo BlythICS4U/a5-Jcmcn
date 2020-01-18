@@ -6,7 +6,7 @@ package problem3;
  * 
  * @author cgallinaro
  */
-public class Person {
+public class Person implements Comparable<Person>{
     
     private final String id;  // School identifier
     
@@ -72,6 +72,11 @@ public class Person {
      */
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public int compareTo(Person o) {    
+        return this.id.compareTo(o.id);        
     }
     
 }
